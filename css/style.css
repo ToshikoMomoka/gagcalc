@@ -1,0 +1,262 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #e8f5e9, #c8e6c9); /* soft green gradient */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e7d32;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 128, 0, 0.1);
+  text-align: center;
+  border: 4px solid #a5d6a7;
+}
+
+/* Header */
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #388e3c;
+}
+
+/* Controls and layout */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.control-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #c5e1a5;
+  border-radius: 6px;
+  background-color: #f1f8e9;
+  color: #2e7d32;
+}
+
+/* Button */
+button,
+.button {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.button:hover {
+  background-color: #43a047;
+}
+
+/* Price */
+.price-display {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #1b5e20;
+}
+
+.upper {
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+  color: #4caf50;
+}
+
+/* Mutations */
+.mutations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.mutations span {
+  background-color: #e8f5e9;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+}
+
+.mutations label {
+  margin-left: 4px;
+  font-size: 0.9rem;
+}
+
+/* Sections */
+section {
+  margin-top: 40px;
+}
+
+.credits ul {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.credits li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #558b2f;
+}
+
+  .dropdown-mutations {
+    position: relative;
+    width: 250px;
+    user-select: none;
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-btn {
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 10;
+  }
+
+  .dropdown-content label {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .dropdown-content input {
+    margin-right: 8px;
+  }
+
+  .dropdown-content label:hover {
+    background-color: #f9f9f9;
+  }
+  @media (max-width: 600px) {
+  .container {
+    padding: 20px 16px;
+    border-width: 2px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .control-group {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  input[type="number"],
+  select {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .price-display {
+    font-size: 1.5rem;
+  }
+
+  .upper {
+    font-size: 1.1rem;
+  }
+
+  .dropdown-mutations {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    max-height: 180px;
+    font-size: 0.9rem;
+  }
+
+  button,
+  .button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .mutations {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mutations span {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}

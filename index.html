@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grow a Garden Calculator</title>
+    <meta name="description" content="Grow a Garden mutation price calculator.">
+    <meta name="author" content="YourName">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <header>
+            <h1 class="title">Grow a Garden Calculator</h1>
+            <p>Estimate the value of a mutated fruit in Roblox's Grow a Garden game.</p>
+        </header>
+
+        <section class="calculator">
+            <h2 class="upper">Press calculate or adjust values below.</h2>
+            <div class="price-display">
+                <h1>~<span class="price">?</span> Sheckles</h1>
+            </div>
+
+            <div class="controls mb-3">
+                <div class="control-group mb-3">
+                    <label for="fruit-select" class="form-label">Fruit:</label>
+                    <select id="fruit-select" class="form-select fruit">
+                        <option selected disabled>Choose a fruit...</option>
+                    </select>
+                </div>
+
+                <div class="control-group mb-3">
+                    <label for="kg-input" class="form-label">Weight (kg):</label>
+                    <input id="kg-input" type="number" class="form-control kg" value="1" min="0.1" step="0.1">
+                </div>
+
+                <div class="control-group mb-3">
+                    <label for="growth-select" class="form-label">Growth Mutation:</label>
+                    <select id="growth-select" class="form-select growth"></select>
+                </div>
+            </div>
+
+            <h2>Stackable Mutations</h2>
+            <div class="mutations d-flex flex-wrap gap-2 mb-3"></div>
+
+            <button id="calc-button" class="btn btn-primary">Calculate</button>
+        </section>
+
+        <section class="credits">
+            <h2>Credits</h2>
+            <ul>
+                <li>@guhw – Original math + idea</li>
+                <li>GaG Wiki contributors – Mutation info</li>
+            </ul>
+        </section>
+
+        <section class="contribute">
+            <h2>Want to Help?</h2>
+            <p>Found a new fruit or value? Click below to contribute!</p>
+            <a class="btn btn-outline-success" href="/html/contribute.html">Submit Data</a>
+        </section>
+
+        <footer class="mt-5" >
+            <p>Disclaimer: Values are estimates. Rare fruits may vary.</p>
+            <p>Report major errors to your Discord contact.</p>
+        </footer>
+    </main>
+    <!-- Firebase CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="/js/fruit-points-data.js"></script>
+
+
+</body>
+
+</html>
